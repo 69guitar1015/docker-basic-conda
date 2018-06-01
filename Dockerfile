@@ -9,3 +9,4 @@ RUN conda update -y -n base conda && \
 
 WORKDIR /home
 EXPOSE 8888
+CMD ["jupyter", "notebook", "--allow-root", "--ip", "0.0.0.0"]
