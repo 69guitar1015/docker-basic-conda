@@ -3,7 +3,7 @@ FROM continuumio/miniconda3
 RUN conda config --append channels conda-forge
 RUN conda update -y -n base conda && \
     conda install -y \
-        cython numpy scipy scikit-learn matplotlib seaborn pandas dask dask-ml \
+        cython numpy scipy scikit-learn matplotlib seaborn plotly pandas dask dask-ml \
         joblib ipython jupyter jupyter_contrib_nbextensions 
 
 RUN jupyter contrib nbextension install --system
