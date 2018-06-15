@@ -1,4 +1,4 @@
-FROM nvidia/cuda
+FROM nvidia/cuda:9.2-cudnn7-devel
 
 RUN apt update && \
     apt install -y 
