@@ -18,11 +18,13 @@ RUN curl -sSL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64
 
 RUN conda config --append channels conda-forge
 RUN conda install -y \
-      cython numpy scipy scikit-learn matplotlib seaborn plotly pandas dask dask-ml \
+      cython numpy scipy scikit-learn matplotlib seaborn plotly pandas \
       joblib ipython jupyter jupyter_contrib_nbextensions 
 
 RUN jupyter contrib nbextension install --system
- 
+
+RUN pip install tqdm cupy-cuda90
+
 WORKDIR /work
 
 EXPOSE 8888
