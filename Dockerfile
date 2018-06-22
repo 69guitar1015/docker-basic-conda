@@ -13,7 +13,9 @@ RUN conda update -y -n base conda && \
         joblib ipython jupyter jupyter_contrib_nbextensions 
 
 RUN jupyter contrib nbextension install --system
- 
+
+RUN pip instal tqdm
+
 WORKDIR /work
 
 EXPOSE 8888
